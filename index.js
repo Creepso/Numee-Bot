@@ -8,6 +8,7 @@ client.login(token);
 client.on('ready', () =>{
 	console.log('Patiente un peu...')
 	console.log('C\'est bon ! Je peut débuter tes commandes ! :)')
+	client.user.setGame('?help | ?add By CreepsoGaming');
 });
 
 client.on('message', message =>{
