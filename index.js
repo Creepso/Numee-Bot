@@ -49,14 +49,6 @@ client.on('message', message =>{
 });
     }
     message.channel.bulkDelete(suppression);
-   message.channel.sendMessage("", {embed: {
-        title: "Success!",
-        color: 0x06DF00,
-        description: "Messages Suprimé!",
-        footer: {
-          text: "Message par " + name + "."
-        }
-      }});
       }
   });
     
