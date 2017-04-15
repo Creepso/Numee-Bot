@@ -51,14 +51,14 @@ client.on('message', message =>{
         }}
                     })
                 }
-        } else {
+                }} else {
             message.reply('You don\'t have the access to this command..').then((message) => {
    setTimeout(() => { message.delete(); }, 5000);
 });
 }
     }else if (message.content == "addbot"){
         message.channel.sendMessage('Hey, add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
-    }}
+    }
       
  
  
