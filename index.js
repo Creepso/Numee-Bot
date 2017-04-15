@@ -101,7 +101,7 @@ client.on('message', message =>{
 
 //----------------------------------------------------------------------------
 const now = require('performance-now');
-const helper = require('../helper');
+const helper = require('helper');
 const request = require("superagent");
 
 module.exports = (bot, db, guildDocument, msg, params) => {
