@@ -98,3 +98,43 @@ client.on('message', message =>{
         message.reply('Tu devras remercier @🍪 Highway Traffic 🍪#0212 pour l\'aide qu\'il a fourni a mon créateur ! C\'est un truc de malade !')
     }
 })
+
+//----------------------------------------------------------------------------
+const now = require('performance-now');
+const helper = require('../helper');
+const request = require("superagent");
+
+module.exports = (bot, db, guildDocument, msg, params) => {
+            var debut = new Date();
+              var mentionned = msg.mentions.users.first();
+      var getvalueof;
+      if(mentionned){
+          var getvalueof = mentionned; 
+      } else {
+          var getvalueof = msg.author;
+      }
+request('http://www.google.com', function (error, response, body) {
+     var fin = new Date();
+    var tempsMs = fin.getTime() - debut.getTime();
+    msg.channel.sendMessage({
+        embed: {
+          type: 'rich',
+          description: '',
+          fields: [{
+            name: 'Ping',
+            value:  tempsMs/(5*2) + ' ms',
+            inline: true
+          }],
+          color: 0x00FF00,
+          footer: {
+            text: 'by CreepsoGaming',
+            proxy_icon_url: ' '
+          },
+           author: {
+            name: getvalueof.username,
+            icon_url: getvalueof.avatarURL,
+            proxy_icon_url: ' '
+          }
+        }
+}) });
+};
