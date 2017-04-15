@@ -15,7 +15,7 @@ client.on('message', message =>{
         message.reply('Je fonctionne :)');
     }
  
-    }else if (message.content == "addbot"){
+    else if (message.content == "addbot"){
         message.channel.sendMessage('Hey, add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
     }
       
