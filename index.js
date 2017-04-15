@@ -31,7 +31,7 @@ client.on('message', message =>{
  
     if(message.content.startsWith(prefix + 'help')){
         message.channel.sendMessage('`Check your DMs` :ok_hand:');
-        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway```');
+        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, \(No prefix:\) addbot, AH```');
  };
  
  
