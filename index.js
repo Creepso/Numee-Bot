@@ -53,43 +53,35 @@ client.on('message', message =>{
     if(message.content.startsWith(prefix + 'lmao')){
         message.channel.sendMessage('LMAO')
         message.channel.sendFile('lmao.jpg');
-}
 });
 
 
     if(message.content.startsWith(prefix + 'help')){
         message.channel.sendMessage('`Check your DMs` :ok_hand:');
         message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway```');
-    }
-});
+ });
 
 
     if(message.content.startsWith(prefix + 'ah')){
         message.channel.sendMessage('AH !')
         message.channel.sendFile('AH.jpg');
-}
 });
 
 
     if (message.content == "AH"){
         message.channel.sendFile('AH2.png')
-    }
 });
 
 
     if (message.content.startsWith(prefix + 'game')){
         client.user.setGame('?help | ?add By CreepsoGaming');
-    }
-
-});
+    });
 
    if (message.content.startsWith(prefix + 'ping')){
         message.channel.sendMessage('PONG !');
    }else{ if (message.content == 'ping')
         message.channel.sendMessage('PONG !');
-    }
-
-});
+    });
 
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
