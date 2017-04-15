@@ -55,13 +55,14 @@ client.on('message', message =>{
           description: '',
           fields: [{
             name: 'Success !',
-            value:  'Content deleted !',
+            value:  'Sucessfully deleted messages.',
             inline: true
           }],
           color: 0x06DF00,
           footer: {
             text: 'by CreepsoGaming',
         }
+             .then(response => { response.delete(5000) })
       }});
     
     if(message.content.startsWith(prefix + 'lmao')){
