@@ -49,15 +49,20 @@ client.on('message', message =>{
 });
     }
     message.channel.bulkDelete(suppression);
-   message.channel.sendMessage("", {embed: {
-        title: "Success!",
-        color: 0x06DF00,
-        description: "Messages Suprimé!",
-        footer: {
-          text: "Message par " + name + "."
+   message.channel.sendMessage({
+        embed: {
+          type: 'rich',
+          description: '',
+          fields: [{
+            name: 'Success !',
+            value:  Content deleted !,
+            inline: true
+          }],
+          color: 0x06DF00,
+          footer: {
+            text: 'by CreepsoGaming',
         }
       }});
-      }
     
     if(message.content.startsWith(prefix + 'lmao')){
         message.channel.sendMessage('LMAO')
