@@ -49,7 +49,7 @@ client.on('message', message =>{
         footer: {
           text: "Message by " + name + "."
         }}
-                    }
+                    })
                 }
         } else {
             message.reply('You don\'t have the access to this command..').then((message) => {
