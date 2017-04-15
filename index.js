@@ -134,10 +134,6 @@ request('http://www.google.com', function (error, response, body) {
             proxy_icon_url: ' '
           }
         }
-}) })
-}
- 
-   );
-  }
+}) }) }}}),
  
 client.login(token)
