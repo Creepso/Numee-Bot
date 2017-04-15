@@ -94,7 +94,6 @@ const now = require('performance-now');
 const helper = require('helper');
 const request = require("superagent");
 
-module.exports = (bot, db, guildDocument, msg, params) => {
             var debut = new Date();
               var mentionned = msg.mentions.users.first();
       var getvalueof;
