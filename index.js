@@ -86,8 +86,7 @@ client.on('message', message =>{
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
         message.reply('Tu devras remercier @🍪 Highway Traffic 🍪#0212 pour l\'aide qu\'il a fourni a mon créateur ! C\'est un truc de malade !')
-    }
-})
+    };
 
 //----------------------------------------------------------------------------
 if (message.content.startsWith(prefix + 'ping')){
