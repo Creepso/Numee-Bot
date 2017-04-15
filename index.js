@@ -55,7 +55,7 @@ client.on('message', message =>{
           description: '',
           fields: [{
             name: 'Success !',
-            value:  Content deleted !,
+            value:  'Content deleted !',
             inline: true
           }],
           color: 0x06DF00,
