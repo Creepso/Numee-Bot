@@ -49,8 +49,7 @@ client.on('message', message =>{
 });
     }
     message.channel.bulkDelete(suppression);   
-  }
-}); 
+  };
 
  
     if(message.content.startsWith(prefix + 'lmao')){
