@@ -58,7 +58,6 @@ client.on('message', message =>{
         }
       }});
       }
-  };
     
     if(message.content.startsWith(prefix + 'lmao')){
         message.channel.sendMessage('LMAO')
