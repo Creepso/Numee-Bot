@@ -20,20 +20,21 @@ client.on('message', message =>{
         message.reply('Add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
     }else if(message.content.startsWith(prefix + 'clear')){
         var chiffre = message.content.substr(6);
-        let Admin = message.guild.roles.find("name", "Admin", "Co-Fonda", "Modo");
-        let Mod = message.guild.roles.find("name","Mod");
-        let Fondateur = message.guild.roles.find("name", "Fondateur");
-        let Owner = message.guild.roles.find("name", "Owner");
-        let Fonda = message.guild.roles.find("name", "Fonda");
-        let CoFondateur = message.guild.roles.find("name", "Co-Fondateur")
-        let CoFonda = message.guild.roles.find("name", "Co-Fonda")
-        let Modo = message.guild.roles.find("name", "Modo")
-        let CoOwner = message.guild.roles.find("name", "Co-Owner")
-        let Founder = message.guild.roles.find("name", "Founder")
-        let Founders = message.guild.roles.find("name", "Founders")
-        let DevY =message.guild.roles.find("name", "Dev_Y")
+        let Admin = message.guild.roles.find("name", "Admin");
+      //  let Mod = message.guild.roles.find("name","Mod");
+      //  let Fondateur = message.guild.roles.find("name", "Fondateur");
+      //  let Owner = message.guild.roles.find("name", "Owner");
+      //  let Fonda = message.guild.roles.find("name", "Fonda");
+      //  let CoFondateur = message.guild.roles.find("name", "Co-Fondateur")
+      //  let CoFonda = message.guild.roles.find("name", "Co-Fonda")
+      //  let Modo = message.guild.roles.find("name", "Modo")
+      //  let CoOwner = message.guild.roles.find("name", "Co-Owner")
+      //  let Founder = message.guild.roles.find("name", "Founder")
+      //  let Founders = message.guild.roles.find("name", "Founders")
+      //  let DevY =message.guild.roles.find("name", "Dev_Y")
         let interdit = "1";
-            if(message.member.roles.has(Admin.id, Mod.id, Fondateur.id, Owner.id, Fonda.id, CoFondateur.id, CoFonda.id, Modo.id, CoOwner.id, Founder.id, Founders.id, DevY.id)){
+            if(message.member.roles.has(Admin.id, )){
+             // Mod.id, Fondateur.id, Owner.id, Fonda.id, CoFondateur.id, CoFonda.id, Modo.id, CoOwner.id, Founder.id, Founders.id, DevY.id
                 if(chiffre === ''){
                     return message.reply('WARNING ! Incorrect syntax ! You are gonna delete the entire channel content');
                 }else{
