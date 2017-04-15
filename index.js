@@ -14,53 +14,45 @@ client.on('message', message =>{
     if(message.content.startsWith(prefix + 'test')){
         message.reply('Je fonctionne :)');
     }
-    else if (message.content == "test"){
-        message.channel.sendMessage('Je fonctionne :)');
-    }else if(message.content.startsWith(prefix + 'add')){
-        message.reply('Add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
-    }else if(message.content.startsWith(prefix + 'clear')){
-        var chiffre = message.content.substr(6);
-        let Admin = message.guild.roles.find("name", "Admin");
-      //  let Mod = message.guild.roles.find("name","Mod");
-      //  let Fondateur = message.guild.roles.find("name", "Fondateur");
-      //  let Owner = message.guild.roles.find("name", "Owner");
-      //  let Fonda = message.guild.roles.find("name", "Fonda");
-      //  let CoFondateur = message.guild.roles.find("name", "Co-Fondateur")
-      //  let CoFonda = message.guild.roles.find("name", "Co-Fonda")
-      //  let Modo = message.guild.roles.find("name", "Modo")
-      //  let CoOwner = message.guild.roles.find("name", "Co-Owner")
-      //  let Founder = message.guild.roles.find("name", "Founder")
-      //  let Founders = message.guild.roles.find("name", "Founders")
-      //  let DevY =message.guild.roles.find("name", "Dev_Y")
-        let interdit = "1";
-            if(message.member.roles.has(Admin.id)){
-             // Mod.id, Fondateur.id, Owner.id, Fonda.id, CoFondateur.id, CoFonda.id, Modo.id, CoOwner.id, Founder.id, Founders.id, DevY.id
-                if(chiffre === ''){
-                    return message.reply('WARNING ! Incorrect syntax ! You are gonna delete the entire channel content');
-                }else{
-                    if (chiffre === interdit){
-                        return message.reply('Error : Nodejs 4632, incorrect valor...');
-                    }else{
-                        message.channel.bulkDelete(chiffre);
-                        message.channel.sendMessage("", {embed: {
-        title: "Success!",
-        color: 0x06DF00,
-        description: "Content deleted!",
-        footer: {
-          text: "Message by " + name + "."
-        }}
-                    })
-                }
-                }} else {
-            message.reply('You don\'t have the access to this command..').then((message) => {
-   setTimeout(() => { message.delete(); }, 5000);
-});
-}
+ 
     }else if (message.content == "addbot"){
         message.channel.sendMessage('Hey, add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
     }
       
- 
+client.on('message', message =>{
+  //Partie Admin
+  //Delete
+  if(message.content.startsWith(prefix + 'clear')){
+    var suppression = message.content.substr(6);
+    let myrole = message.guild.member(client.user).hasPermission("MANAGE_MESSAGES"); //recuperer les droits necessaire
+    let yourole = message.guild.member(message.author).hasPermission("MANAGE_MESSAGES"); //recuperer les droits necessaire
+    if(!myrole){ 
+      return message.reply("I don't have the permissions.");
+    }
+    if(!yourole){
+      return message.reply(":no_entry: You don't have the correct permissions. :no_entry:").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(suppression ==''){
+      return message.reply("Sorry, you didn't give arguments, set a number between 2 and 100").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(suppression <= 1){
+      return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(suppression >= 101){
+       return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    message.channel.bulkDelete(suppression);   
+  }
+}); 
+
  
     if(message.content.startsWith(prefix + 'lmao')){
         message.channel.sendMessage('LMAO')
