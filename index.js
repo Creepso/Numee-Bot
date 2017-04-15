@@ -51,7 +51,7 @@ client.on('message', message =>{
         }}
                     })
                 }
-        } else {
+        } else if {
             message.reply('You don\'t have the access to this command..').then((message) => {
    setTimeout(() => { message.delete(); }, 5000);
 });
