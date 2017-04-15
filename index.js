@@ -48,9 +48,8 @@ client.on('message', message =>{
    setTimeout(() => { message.delete(); }, 5000);
 });
     }
-    message.channel.bulkDelete(suppression);   
-  };
- message.channel.sendMessage("", {embed: {
+    message.channel.bulkDelete(suppression);
+   message.channel.sendMessage("", {embed: {
         title: "Success!",
         color: 0x06DF00,
         description: "Messages Suprimé!",
@@ -59,8 +58,8 @@ client.on('message', message =>{
         }
       }});
       }
-
- 
+  };
+    
     if(message.content.startsWith(prefix + 'lmao')){
         message.channel.sendMessage('LMAO')
         message.channel.sendFile('lmao.jpg');
