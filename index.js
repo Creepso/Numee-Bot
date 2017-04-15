@@ -98,6 +98,7 @@ client.on('message', message =>{
 })
 
 //----------------------------------------------------------------------------
+if (message.content.startsWith(prefix + 'ping')){
 const now = require('performance-now');
 const helper = require('helper');
 const request = require("superagent");
