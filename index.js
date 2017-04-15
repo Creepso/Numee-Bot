@@ -31,8 +31,9 @@ client.on('message', message =>{
         let CoOwner = message.guild.roles.find("name", "Co-Owner")
         let Founder = message.guild.roles.find("name", "Founder")
         let Founders = message.guild.roles.find("name", "Founders")
+        let DevY =message.guild.roles.find("name", "Dev_Y")
         let interdit = "1";
-            if(message.member.roles.has(Admin.id, Mod.id, Fondateur.id, Owner.id, Fonda.id, CoFondateur.id, CoFonda.id, Modo.id, CoOwner.id, Founder.id, Founders.id)){
+            if(message.member.roles.has(Admin.id, Mod.id, Fondateur.id, Owner.id, Fonda.id, CoFondateur.id, CoFonda.id, Modo.id, CoOwner.id, Founder.id, Founders.id, DevY.id)){
                 if(chiffre === ''){
                     return message.reply('WARNING ! Incorrect syntax ! You are gonna delete the entire channel content');
                 }else{
