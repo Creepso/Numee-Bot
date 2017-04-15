@@ -20,7 +20,7 @@ client.on('message', message =>{
         message.reply('Add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
     }else if(message.content.startsWith(prefix + 'clear')){
         var chiffre = message.content.substr(6);
-        let myRole = message.guild.roles.find("name", "Admin");
+        let myRole = message.guild.roles.find("name", "Admin", "Mod", "Fondateur", "Owner", "Fonda", "Co-Fondateur", "Co-Fonda", "Modo");
         let interdit = "1";
             if(message.member.roles.has(myRole.id)){
                 if(chiffre === ''){
