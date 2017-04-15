@@ -48,7 +48,7 @@ client.on('message', message =>{
         description: "Content deleted!",
         footer: {
           text: "Message by " + name + "."
-        )}}
+        }}
                     }
                 }
         } else {
