@@ -18,8 +18,7 @@ client.on('message', message =>{
     else if (message.content == "addbot"){
         message.channel.sendMessage('Hey, add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
     }
-      
-client.on('message', message =>{
+ 
   //Partie Admin
   //Delete
   if(message.content.startsWith(prefix + 'clear')){
