@@ -19,51 +19,6 @@ client.on('message', message =>{
         message.channel.sendMessage('Hey, add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
     }
  
-  //Partie Admin
-  //Delete
-  if(message.content.startsWith(prefix + 'clear')){
-    var suppression = message.content.substr(6);
-    let myrole = message.guild.member(client.user).hasPermission("MANAGE_MESSAGES"); //recuperer les droits necessaire
-    let yourole = message.guild.member(message.author).hasPermission("MANAGE_MESSAGES"); //recuperer les droits necessaire
-    if(!myrole){ 
-      return message.reply("I don't have the permissions.");
-    }
-    if(!yourole){
-      return message.reply(":no_entry: You don't have the correct permissions. :no_entry:").then((message) => {
-   setTimeout(() => { message.delete(); }, 5000);
-});
-    }
-    if(suppression ==''){
-      return message.reply("Sorry, you didn't give arguments, set a number between 2 and 100").then((message) => {
-   setTimeout(() => { message.delete(); }, 5000);
-});
-    }
-    if(suppression <= 1){
-      return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
-   setTimeout(() => { message.delete(); }, 5000);
-});
-    }
-    if(suppression >= 101){
-       return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
-   setTimeout(() => { message.delete(); }, 5000);
-});
-    }
-    message.channel.bulkDelete(suppression);
-   message.channel.sendMessage({
-        embed: {
-          type: 'rich',
-          description: '',
-          fields: [{
-            name: 'Success !',
-            value:  'Sucessfully deleted messages.',
-            inline: true
-          }],
-          color: 0x06DF00,
-          footer: {
-            text: 'by CreepsoGaming',
-        }
-      }}).then(response => { response.delete(5000) });
-    
     if(message.content.startsWith(prefix + 'lmao')){
         message.channel.sendMessage('LMAO')
         message.channel.sendFile('lmao.jpg');
@@ -134,6 +89,54 @@ request('http://www.google.com', function (error, response, body) {
             proxy_icon_url: ' '
           }
         }
-}) }) }}}),
+}) }) }}),
+// ------------------------------------------------------
+//Partie Admin
+  //Delete
+  client.on('message', message => {
+
+  if(message.content.startsWith(prefix + 'clear')){
+    var suppression = message.content.substr(6);
+    let myrole = message.guild.member(client.user).hasPermission("MANAGE_MESSAGES"); //recuperer les droits necessaire
+    let yourole = message.guild.member(message.author).hasPermission("MANAGE_MESSAGES"); //recuperer les droits necessaire
+    if(!myrole){ 
+      return message.reply("I don't have the permissions.");
+    }
+    if(!yourole){
+      return message.reply(":no_entry: You don't have the correct permissions. :no_entry:").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(suppression ==''){
+      return message.reply("Sorry, you didn't give arguments, set a number between 2 and 100").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(suppression <= 1){
+      return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(suppression >= 101){
+       return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    message.channel.bulkDelete(suppression);
+   message.channel.sendMessage({
+        embed: {
+          type: 'rich',
+          description: '',
+          fields: [{
+            name: 'Success !',
+            value:  'Content deleted !',
+            inline: true
+          }],
+          color: 0x06DF00,
+          footer: {
+            text: 'by CreepsoGaming',
+        }
+      }}).then(response => { response.delete(5000) });
+  }});
  
 client.login(token)
