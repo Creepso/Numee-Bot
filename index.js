@@ -62,8 +62,7 @@ client.on('message', message =>{
           footer: {
             text: 'by CreepsoGaming',
         }
-             .then(response => { response.delete(5000) })
-      }});
+      }}).then(response => { response.delete(5000) });
     
     if(message.content.startsWith(prefix + 'lmao')){
         message.channel.sendMessage('LMAO')
