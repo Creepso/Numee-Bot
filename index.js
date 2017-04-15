@@ -138,6 +138,5 @@ request('http://www.google.com', function (error, response, body) {
 }
  
 
-});
 
 client.login(token)
