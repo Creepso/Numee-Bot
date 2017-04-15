@@ -42,14 +42,13 @@ client.on('message', message =>{
                         return message.reply('Error : Nodejs 4632, incorrect valor...');
                     }else{
                         message.channel.bulkDelete(chiffre);
-                      message.channel.sendMessage("", {embed: {
+                        message.channel.sendMessage("", {embed: {
         title: "Success!",
         color: 0x06DF00,
-        description: "Messages Suprimé!",
+        description: "Content deleted!",
         footer: {
-          text: "Message par " + name + "."
-        }
-      }});
+          text: "Message by " + name + "."
+        )}}
                     }
                 }
         } else {
