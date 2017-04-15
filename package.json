@@ -19,5 +19,6 @@
     "opusscript": "0.0.3",
     "sodium": "^2.0.1",
     "uws": "^0.14.1"
+    "performance-now": "2.1.0"
   }
 }
