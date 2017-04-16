@@ -50,7 +50,10 @@ client.on('message', message =>{
         client.user.setGame('?help | ?add By CreepsoGaming');
     };
  
-   
+    if (message.content.startsWith(prefix + 'say')){
+     var say = message.content.substr(5);
+     message.channel.sendMessage(say);
+    }
  
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
@@ -94,6 +97,8 @@ request('http://www.google.com', function (error, response, body) {
           }
         }
 }) }) }}),
+ 
+ 
 // ------------------------------------------------------
 //Partie Admin
   //Delete
