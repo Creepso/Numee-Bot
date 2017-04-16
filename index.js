@@ -47,7 +47,7 @@ client.on('message', message =>{
  
    if(message.content.startsWith(prefix + 'servers')) {
     var ServCount = client.guilds.size;
-    message.reply('i\'m connected to' + ServCount + 'servers');
+    message.reply('i\'m connected to `' + ServCount + '` servers');
    };
  
     if (message.content.startsWith(prefix + 'game')){
