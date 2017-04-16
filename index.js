@@ -31,7 +31,7 @@ client.on('message', message =>{
  
     if(message.content.startsWith(prefix + 'help')){
         message.channel.sendMessage('`Check your DMs` :ok_hand:');
-        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, \(No prefix:\) addbot, AH```');
+        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, say\(No prefix:\) addbot, AH```');
  };
  
  
@@ -53,6 +53,11 @@ client.on('message', message =>{
     if (message.content.startsWith(prefix + 'say')){
      var say = message.content.substr(5);
      message.channel.sendMessage(say);
+    }
+    if (message.content.startsWith(prefix + 'sayd')){
+     var sayd = message.content.substr(6);
+     message.channel.sendMessage(sayd);
+     message.delete(message.author);
     }
  
 //client.on('message', message =>{
