@@ -53,7 +53,7 @@ client.on('message', message =>{
 
  
    if(message.content.startsWith(prefix + 'nameservers')) {
-    var ServNames = client.guilds.name;
+    var ServNames = client.guilds.name.size;
     message.reply(`i'm connected to ${ServNames} servers`);
    };
  
