@@ -31,7 +31,7 @@ client.on('message', message =>{
  
     if(message.content.startsWith(prefix + 'help')){
         message.channel.sendMessage('`Check your DMs` :ok_hand:');
-        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, say\(No prefix:\) addbot, AH```');
+        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, say, sayd, devserv\(No prefix:\) addbot, AH```');
  };
  
  
@@ -60,6 +60,22 @@ client.on('message', message =>{
      var sayd = message.content.substr(6);
      message.channel.sendMessage(sayd);
 };
+ 
+   if (message.content.startsWith(prefix + 'devserv')) {
+     message.channel.sendMessage({
+              embed: {
+          type: 'rich',
+          description: '',
+          fields: [{
+            name: '**Link to dev server**',
+            value:  'https://discord.gg/arW2bze',
+            inline: true
+          }],
+          color: 0x07DF00,
+          footer: {
+            text: 'Join us !',
+          }
+              }});
  
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
@@ -153,5 +169,6 @@ request('http://www.google.com', function (error, response, body) {
         }
       }}).then(response => { response.delete(5000) });
   }});
+
  
 client.login(token)
