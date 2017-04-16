@@ -53,12 +53,12 @@ client.on('message', message =>{
     if (message.content.startsWith(prefix + 'say')){
      var say = message.content.substr(5);
      message.channel.sendMessage(say);
-    }
-   else if (message.content.startsWith(prefix + 'sayd')){
+    };
+    if (message.content.startsWith(prefix + 'sayd')){
      message.delete(message.author);
      var sayd = message.content.substr(6);
      message.channel.sendMessage(sayd);
-    }
+    };
  
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
