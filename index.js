@@ -54,7 +54,7 @@ client.on('message', message =>{
  
    if(message.content.startsWith(prefix + 'nameservers')) {
     var ServNames = client.guilds.name;
-    message.reply('i\'m connected to ${ServNames} servers');
+    message.reply(`i'm connected to ${ServNames} servers`);
    };
  
  
