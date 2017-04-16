@@ -61,21 +61,6 @@ client.on('message', message =>{
      message.channel.sendMessage(sayd);
 };
  
-   if (message.content.startsWith(prefix + 'devserv')) {
-     message.channel.sendMessage({
-              embed: {
-          type: 'rich',
-          description: '',
-          fields: [{
-            name: '**Link to dev server**',
-            value:  'https://discord.gg/arW2bze',
-            inline: true
-          }],
-          color: 0x07DF00,
-          footer: {
-            text: 'Join us !',
-          }
-              }});
  
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
