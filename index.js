@@ -54,10 +54,10 @@ client.on('message', message =>{
      var say = message.content.substr(5);
      message.channel.sendMessage(say);
     }
-    if (message.content.startsWith(prefix + 'sayd')){
+   else if (message.content.startsWith(prefix + 'sayd')){
+     message.delete(message.author);
      var sayd = message.content.substr(6);
      message.channel.sendMessage(sayd);
-     message.delete(message.author);
     }
  
 //client.on('message', message =>{
