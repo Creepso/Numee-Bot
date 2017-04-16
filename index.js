@@ -45,6 +45,10 @@ client.on('message', message =>{
         message.channel.sendFile('AH2.png')
 };
  
+   if(message.content.startsWith(prefix + 'servers')) {
+    var ServCount = client.guilds.size;
+    message.reply('ServCount');
+   };
  
     if (message.content.startsWith(prefix + 'game')){
         client.user.setGame('?help | ?add By CreepsoGaming');
