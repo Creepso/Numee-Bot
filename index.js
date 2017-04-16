@@ -52,7 +52,7 @@ client.on('message', message =>{
    };
 
  
-   if(message.content.startsWith(prefix + 'serversname')) {
+   if(message.content.startsWith(prefix + 'nameservers')) {
     var ServNames = client.guilds.name;
     message.reply('i\'m connected to `' + ServNames + '` servers');
    };
