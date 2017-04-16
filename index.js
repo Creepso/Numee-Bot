@@ -45,14 +45,23 @@ client.on('message', message =>{
         message.channel.sendFile('AH2.png')
 };
  
+ 
    if(message.content.startsWith(prefix + 'servers')) {
     var ServCount = client.guilds.size;
     message.reply('i\'m connected to `' + ServCount + '` servers');
    };
+
+ 
+   if(message.content.startsWith(prefix + 'serversname')) {
+    var ServNames = client.guilds.name;
+    message.reply('i\'m connected to `' + ServNames + '` servers');
+   };
+ 
  
     if (message.content.startsWith(prefix + 'game')){
         client.user.setGame('?help | ?add By CreepsoGaming');
     };
+ 
  
     if (message.content.startsWith(prefix + 'say')){
      var say = message.content.substr(5);
