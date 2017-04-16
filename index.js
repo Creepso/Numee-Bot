@@ -53,13 +53,13 @@ client.on('message', message =>{
 
  
    if(message.content.startsWith(prefix + 'nameservers')) {
-    var ServNames = client.guilds.name.size;
+    var ServNames = client.guilds.name;
     message.reply(`i'm connected to ${ServNames} servers`);
    };
  
  
     if (message.content.startsWith(prefix + 'game')){
-     var setGame = client.user.setGame;
+     var setGame = message.content.substr(6);
         client.user.setGame(setGame);
      message.channel.sendMessage('Done :ok_hand:');
     };
