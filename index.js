@@ -59,7 +59,9 @@ client.on('message', message =>{
  
  
     if (message.content.startsWith(prefix + 'game')){
-        client.user.setGame('?help | ?add By CreepsoGaming');
+     var setGame = client.user.setGame;
+        client.user.setGame(setGame);
+     message.channel.sendMessage('Done :ok_hand:');
     };
  
  
