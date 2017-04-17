@@ -2,7 +2,7 @@ const discord = require('discord.js'),
 client = new discord.Client();
 const token = "Mjk4NTQwODI1ODc1NTc4ODgw.C9OT6g.XXmUCpCGxsJMTKc2tqjH8IiCSaE";
 const prefix = "?";
-var createur = "<@265180227511123981>";
+var createur = "265180227511123981";
 //embed_object = discord.Embed(color=my_color, title="my title")
  
 client.on('ready', () =>{
