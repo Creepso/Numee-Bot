@@ -76,6 +76,18 @@ client.on('message', message =>{
      message.channel.sendMessage(dsay);
 };
  
+    if(message.content.startsWith(prefix + 'jeu')){
+  if(message.author.id == createur){
+    var jeu = message.content.substr(4)
+  client.user.setGame(jeu).then(ok=>{
+    message.reply('Changement effectué');
+  });
+    
+  }else{
+  return message.channel.sendMessage("Vous n'avez pas les permissions necessaires");
+  }
+
+}
  
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
