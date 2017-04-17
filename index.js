@@ -2,6 +2,7 @@ const discord = require('discord.js'),
 client = new discord.Client();
 const token = "Mjk4NTQwODI1ODc1NTc4ODgw.C9OT6g.XXmUCpCGxsJMTKc2tqjH8IiCSaE";
 const prefix = "?";
+var createur = <@265180227511123981>;
 //embed_object = discord.Embed(color=my_color, title="my title")
  
 client.on('ready', () =>{
@@ -76,15 +77,15 @@ client.on('message', message =>{
      message.channel.sendMessage(dsay);
 };
  
-    if(message.content.startsWith(prefix + 'jeu')){
-    var jeu = message.content.substr(4)
-  client.user.setGame(jeu).then(ok=>{
-    message.reply('Changement effectué');
-  });
-    
-  }else{
-  return message.channel.sendMessage("Vous n'avez pas les permissions necessaires");
-  }
+if(message.content.startsWith(prefix + 'jeu')){
+if(message.author.id == createur){
+var jeu = message.content.substr(4);
+ client.user.setGame(jeu);
+   message.reply('Changement effectué');
+ }else{
+ message.channel.sendMessage("Vous n'avez pas les permissions necessaires");
+}
+};
 
  
 //client.on('message', message =>{
