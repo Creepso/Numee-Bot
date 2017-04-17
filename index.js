@@ -150,17 +150,17 @@ request('http://www.google.com', function (error, response, body) {
 });
     }
     if(suppression ==''){
-      return message.reply("Sorry, you didn't give arguments, set a number between 2 and 100").then((message) => {
+      return message.reply("Sorry, you didn't give arguments, set a number between 2 and 2000").then((message) => {
    setTimeout(() => { message.delete(); }, 5000);
 });
     }
     if(suppression <= 1){
-      return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
+      return message.reply("Sorry, i can't do that, set a number between 2 and 2000").then((message) => {
    setTimeout(() => { message.delete(); }, 5000);
 });
     }
-    if(suppression >= 101){
-       return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
+    if(suppression >= 2001){
+       return message.reply("Sorry, i can't do that, set a number between 2 and 2000").then((message) => {
    setTimeout(() => { message.delete(); }, 5000);
 });
     }
