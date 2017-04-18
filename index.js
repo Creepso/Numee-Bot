@@ -79,6 +79,7 @@ client.on('message', message =>{
  
  if (message.content.startsWith(prefix + 'leave')){
  if (message.author.id == createur) {
+  message.channel.sendMessage('Bye Bye ! :briefcase:');
   message.guild.leave().then(guild => console.log('J\'ai quitté la guilde', guild.name)).catch(console.log);
  }
  };
