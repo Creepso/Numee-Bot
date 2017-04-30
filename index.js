@@ -32,7 +32,7 @@ client.on('message', message =>{
  
     if(message.content.startsWith(prefix + 'help')){
         message.channel.sendMessage('`Check your DMs` :ok_hand:');
-        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, say, sayd, devserv\(No prefix:\) addbot, AH```');
+        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, say, dsay, servers, nameservers, idea \(No prefix:\) addbot, AH```');
  };
  
  
@@ -58,11 +58,8 @@ client.on('message', message =>{
     message.reply(`i'm connected to ${ServNames.length} servers`);
    };
  
- 
-    if (message.content.startsWith(prefix + 'game')){
-     var setGame = message.content.substr(6);
-        client.user.setGame(setGame);
-     message.channel.sendMessage('Done :ok_hand:');
+    if (message.content.startsWith(prefix + 'idea')){
+     message.reply('Hey ! If you have a great idea, send it to @CreepsoGaming#0821, It\'s my founder !');
     };
  
  
