@@ -6,33 +6,36 @@ var createur = "265180227511123981";
 ///embed_object = discord.Embed(color=my_color, title="my title")
  
 client.on('ready', () =>{
+  
     console.log('Patiente un peu...')
     console.log('C\'est bon ! Je peut débuter tes commandes ! :)')
     client.user.setGame('?help | ?add By CreepsoGaming');
 });
  
 client.on('message', message =>{
-    if(message.content.startsWith(prefix + 'test')){
+     memberCount = client.users.size;
+     servercount = client.guilds.size;
+    if(message.content === '?test'){
         message.reply('Je fonctionne :)');
     }
  
-    else if (message.content == "addbot"){
+    else if (message.content === "addbot"){
         message.channel.sendMessage('Hey, add me: **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**');
     }
 
-    if(message.content.startsWith(prefix + 'add')){
+    if(message.content === '?add'){
       message.reply('Add me\(and have fun\): **https://discordapp.com/oauth2/authorize?client_id=298540825875578880&scope=bot&permissions=2146958463**')
     }
  
-    if(message.content.startsWith(prefix + 'lmao')){
+    if(message.content === '?lmao'){
         message.channel.sendMessage('LMAO')
         message.channel.sendFile('lmao.jpg');
 };
  
  
-    if(message.content.startsWith(prefix + 'help')){
+    if(message.content === '?help'){
         message.channel.sendMessage('`Check your DMs` :ok_hand:');
-        message.author.sendMessage('Commands: ```lmao, ah, help, clear, add, ping, highway, test, say, dsay, servers, nameservers, idea \(No prefix:\) addbot, AH```');
+        message.author.sendMessage('Commands: ```?lmao, ?ah, ?help, ?clear, ?add, ?ping, ?highway, ?test, ?say, ?dsay, ?servers, ?nameservers, ?idea \(No prefix:\) addbot, AH```');
  };
  
  
@@ -49,7 +52,7 @@ client.on('message', message =>{
  
    if(message.content.startsWith(prefix + 'servers')) {
     var ServCount = client.guilds.size;
-    message.reply('i\'m connected to `' + ServCount + '` servers');
+    message.reply('i\'m connected to `' + servercount + '` servers');
    };
 
  
