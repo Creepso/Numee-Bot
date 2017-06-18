@@ -3,6 +3,7 @@ client = new discord.Client();
 const token = "Mjk4NTQwODI1ODc1NTc4ODgw.C96dYA.5rWvoBSVshh9k4pnRM242fCokFo";
 const prefix = "?";
 var createur = "265180227511123981";
+var createur_m = "<@265180227511123981>";
 ///embed_object = discord.Embed(color=my_color, title="my title")
  
 client.on('ready', () =>{
@@ -62,7 +63,7 @@ client.on('message', message =>{
    };
  
     if (message.content.startsWith(prefix + 'idea')){
-     message.reply('Hey ! If you have a great idea, send it to @CreepsoGaming#0821, It\'s my founder !');
+     message.reply('Hey ! If you have a great idea, send it to ' + createur_m + ', It\'s my founder !');
     };
  
  
