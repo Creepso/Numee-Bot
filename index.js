@@ -1,6 +1,6 @@
 const discord = require('discord.js'),
 client = new discord.Client();
-const token = "Mjk4NTQwODI1ODc1NTc4ODgw.C96dYA.5rWvoBSVshh9k4pnRM242fCokFo";
+const token = "Mjk4NTQwODI1ODc1NTc4ODgw.DCl5Cg.Ftil1VUHZVw-mglh9uO_aj8P-WE";
 const prefix = "?";
 var createur = "265180227511123981";
 var createur_m = "<@265180227511123981>";
