@@ -33,17 +33,6 @@ client.on('message', message =>{
         message.channel.sendFile('lmao.jpg');
 };
  
- if(message.content === '?avatar'){
-        message.channel.sendMessage({ //ce type de message ne mentionne pas et permet de manier le css (embed sur ce cas)
-            embed:{
-                title : 'Ton avatar est:', //C'est le titre
-                image : {
-                    url : message.author.avatarURL //on demande l'url de l'avatar de l'auteur du message
-                }
-            }
-        });
-    }
-});
  
     if(message.content === '?help'){
         message.channel.sendMessage('`Check your DMs` :ok_hand:');
