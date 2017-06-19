@@ -102,7 +102,7 @@ var jeu = message.content.substr(4);
     };
  
  
- client.on('guildMemberAdd', member => {
+ /* client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find('name', 'bienvenue');
     if(!channel) return;
     channel.createInvite({
@@ -120,7 +120,7 @@ var jeu = message.content.substr(4);
     "Invite tes amis à nous rejoindre : http://discord.gg/" + url.code);
      console.log(member.guild.name + ' ' + url.code);
         });
-});
+}); */
 //----------------------------------------------------------------------------
 if (message.content.startsWith(prefix + 'ping')){
 const now = require('performance-now');
