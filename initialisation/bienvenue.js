@@ -1,3 +1,5 @@
+function bienvenue(message, client) {
+
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find('name', 'bienvenue');
     if(!channel) return;
