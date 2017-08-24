@@ -89,12 +89,48 @@ if(message.content.startsWith(prefix + 'jeu')){
 if(message.author.id == createur){
 var jeu = message.content.substr(4);
  client.user.setGame(jeu);
-   message.reply('Changement effectué');
- }else{
- message.channel.sendMessage("Vous n'avez pas les permissions necessaires");
+   message.reply('Cest bon Fab');
+}else{
+ message.channel.sendMessage("Nan gros tas pas les perms")
 }
 };
 
+ 
+ if(message.content.startsWith(prefix + 'clearadmin')){
+if(message.author.id == createur){
+var clearadmin = message.content.substr(11);
+ if(clearadmin ==''){
+      return message.reply("Entre 2 et 100 Fab").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(clearadmin <= 1){
+      return message.reply("Entre 2 et 100 Fab").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    if(clearadmin >= 101){
+       return message.reply("Entre 2 et 100 Fab").then((message) => {
+   setTimeout(() => { message.delete(); }, 5000);
+});
+    }
+    message.channel.bulkDelete(suppression);
+   message.channel.sendMessage({
+        embed: {
+          type: 'rich',
+          description: '',
+          fields: [{
+            name: 'Success !',
+            value:  'Content deleted !',
+            inline: true
+          }],
+          color: 0x06DF00,
+          footer: {
+            text: 'by CreepsoGaming',
+        }
+      }}).then(response => { response.delete(5000) });
+  }});
+};
  
 //client.on('message', message =>{
     if (message.content.startsWith(prefix + 'highway')){
@@ -175,8 +211,8 @@ request('http://www.google.com', function (error, response, body) {
    setTimeout(() => { message.delete(); }, 5000);
 });
     }
-    if(suppression >= 2001){
-       return message.reply("Sorry, i can't do that, set a number between 2 and 2000").then((message) => {
+    if(suppression >= 101){
+       return message.reply("Sorry, i can't do that, set a number between 2 and 100").then((message) => {
    setTimeout(() => { message.delete(); }, 5000);
 });
     }
