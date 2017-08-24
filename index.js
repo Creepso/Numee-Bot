@@ -101,6 +101,14 @@ var jeu = message.content.substr(4);
         message.reply('Tu devras remercier @🍪 Highway Traffic 🍪#0212 pour l\'aide qu\'il a fourni a mon créateur ! C\'est un truc de malade !')
     };
  
+ 
+ 
+ client.on('channelCreate',(channel, guild) => {
+     if(channel.type == 'text'){
+       let guild = channel.guild;
+       guild.defaultChannel.sendMessage('Jarrive dans ta vie bro')
+     }
+ });
 //----------------------------------------------------------------------------
 if (message.content.startsWith(prefix + 'ping')){
 const now = require('performance-now');
